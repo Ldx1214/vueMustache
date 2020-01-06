@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>vue</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+    <p class="insert">
+        {{message}}
+        <button v-on:click="change">改变</button>
+    </p>
+    <script>
+    var insert = new Vue({
+        el:".insert",
+        data:{
+             message:"信息"
+        },
+        methods:{
+         change:function(){
+             this.message = "改动信息";
+         }
+        }
+     })
+    </script>
+</body>
+</html>
